@@ -17,4 +17,5 @@ dependencyResolutionManagement {
 includeBuild("build-settings")
 includeBuild("build-conventions")
 
-include(":app")
+include(":sources:app")
+include(":sources:feature:feature-feed")

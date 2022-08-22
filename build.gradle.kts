@@ -2,7 +2,6 @@ buildscript {
 
     repositories {
         google()
-        jcenter()
         mavenCentral()
         gradlePluginPortal()
     }
@@ -16,8 +15,7 @@ buildscript {
         repositories {
             google()
             mavenCentral()
-            jcenter()
+            maven { setUrl("https://jitpack.io") }
         }
     }
 }
-
