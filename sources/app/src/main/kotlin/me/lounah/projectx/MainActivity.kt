@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import by.kirich1409.viewbindingdelegate.viewBinding
 import me.lounah.projectx.databinding.ActivityMainBinding
-import me.lounah.projectx.feature.feed.FeedFragment
+import me.lounah.projectx.feature.feed.host.FeedFragment
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 

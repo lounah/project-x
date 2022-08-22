@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feed_tab_hot">Популярное</string>
+    <string name="feed_tab_latest">Свежее</string>
+    <string name="feed_tab_personal">Моя лента</string>
+</resources>

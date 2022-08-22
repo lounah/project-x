@@ -2,6 +2,7 @@ package me.lounah.projectx.feature.feed.tab
 
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import by.kirich1409.viewbindingdelegate.viewBinding
 import me.lounah.projectx.feature.feed.R
@@ -16,7 +17,6 @@ internal class FeedTabFragment : Fragment(R.layout.fragment_feed_tab) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mode = arguments?.getSerializable(ARG_MODE) as FeedMode
-        binding.title.text = mode.name
     }
 
     companion object {
@@ -31,6 +31,8 @@ internal class FeedTabFragment : Fragment(R.layout.fragment_feed_tab) {
     }
 }
 
-enum class FeedMode {
-    HOT, LATEST, PERSONAL
+enum class FeedMode(@StringRes val description: Int) {
+    HOT(R.string.feed_tab_hot),
+    LATEST(R.string.feed_tab_latest),
+    PERSONAL(R.string.feed_tab_personal)
 }
