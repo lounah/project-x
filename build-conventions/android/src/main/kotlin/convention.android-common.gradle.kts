@@ -43,8 +43,8 @@ configure<BaseExtension> {
 
     @Suppress("UnstableApiUsage")
     with(buildFeatures) {
-        compose = false
-        viewBinding = false
+        viewBinding = true
         buildConfig = true
+        compose = false
     }
 }

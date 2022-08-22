@@ -26,7 +26,7 @@ configure<BaseExtension> {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = true
-            isShrinkResources = true
+            isShrinkResources = false
             signingConfig = signingConfigs.getByName("release")
             isDebuggable = false
             proguardFiles(

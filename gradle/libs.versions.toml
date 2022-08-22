@@ -69,5 +69,7 @@ elmslieCore = { module = "com.github.vivid-money.elmslie:elmslie-core", version.
 elmslieAndroid = { module = "com.github.vivid-money.elmslie:elmslie-android", version.ref = "elmslie" }
 elmslieCoroutines = { module = "com.github.vivid-money.elmslie:elmslie-coroutines", version.ref = "elmslie" }
 
+vbdelegate = "com.github.kirich1409:viewbindingpropertydelegate:1.5.6"
+
 [bundles]
 elmslie = ["elmslieCore", "elmslieAndroid", "elmslieCoroutines"]
