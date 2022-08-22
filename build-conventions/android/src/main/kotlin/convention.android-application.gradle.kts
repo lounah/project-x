@@ -10,7 +10,7 @@ plugins {
 android {
 
     defaultConfig {
-        applicationId = "me.lounah.project-x"
+        applicationId = "me.lounah.projectx"
     }
 
     testBuildType = "debug"

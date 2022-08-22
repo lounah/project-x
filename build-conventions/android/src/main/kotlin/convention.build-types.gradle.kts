@@ -9,14 +9,14 @@ configure<BaseExtension> {
     signingConfigs {
         getByName("debug") {
             val env = Environment.debug
-            storeFile = File("signing/debug.keystore")
+            storeFile = File("${project.rootDir}/signing/debug.keystore")
             storePassword = env.signing.storePassword
             keyAlias = env.signing.keyAlias
             keyPassword = env.signing.keyPassword
         }
         create("release") {
             val env = Environment.production
-            storeFile = File("signing/release.keystore")
+            storeFile = File("${project.rootDir}/signing/debug.keystore")
             storePassword = env.signing.storePassword
             keyAlias = env.signing.keyAlias
             keyPassword = env.signing.keyPassword
