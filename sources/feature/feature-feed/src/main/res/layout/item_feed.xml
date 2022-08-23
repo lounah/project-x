@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/avatar"
@@ -13,7 +13,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@color/cardview_dark_background" />
+        android:src="@color/cardview_dark_background" />
 
     <TextView
         android:id="@+id/username"
@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toBottomOf="@id/avatar"
         app:layout_constraintStart_toEndOf="@id/avatar"
         app:layout_constraintTop_toTopOf="@id/avatar"
-        tools:text="lounah" />
+        android:text="lounah" />
 
     <TextView
         android:id="@+id/time"
@@ -37,7 +37,7 @@
         app:layout_constraintBottom_toBottomOf="@id/username"
         app:layout_constraintStart_toEndOf="@id/username"
         app:layout_constraintTop_toTopOf="@id/username"
-        tools:text="55 мин" />
+        android:text="55 мин" />
 
     <ImageButton
         android:id="@+id/options"
@@ -54,23 +54,102 @@
     <TextView
         android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/avatar"
-        tools:layout_height="150dp" />
+        android:layout_height="150dp" />
 
     <ImageButton
         android:id="@+id/discuss"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/ic_comments"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/content"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/discuss"
+        app:layout_constraintStart_toEndOf="@id/discuss"
+        app:layout_constraintTop_toTopOf="@id/discuss"
+        android:text="381" />
+
+    <ImageButton
+        android:id="@+id/bookmark"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/ic_bookmark"
+        app:layout_constraintBottom_toBottomOf="@id/comments"
+        app:layout_constraintStart_toEndOf="@id/comments"
+        app:layout_constraintTop_toTopOf="@id/comments"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/share"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/ic_share"
+        app:layout_constraintBottom_toBottomOf="@id/comments"
+        app:layout_constraintStart_toEndOf="@id/bookmark"
+        app:layout_constraintTop_toTopOf="@id/comments"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/downvote"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/ic_rating_down"
+        app:layout_constraintBottom_toBottomOf="@id/comments"
+        app:layout_constraintEnd_toStartOf="@id/rating"
+        app:layout_constraintTop_toTopOf="@id/comments"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/bookmark"
+        app:layout_constraintEnd_toStartOf="@id/upvote"
+        app:layout_constraintTop_toTopOf="@id/bookmark"
+        android:text="381" />
+
+    <ImageButton
+        android:id="@+id/upvote"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/ic_rating_up"
+        app:layout_constraintBottom_toBottomOf="@id/comments"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/comments"
         tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

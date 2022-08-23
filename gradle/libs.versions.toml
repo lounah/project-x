@@ -70,6 +70,9 @@ elmslieAndroid = { module = "com.github.vivid-money.elmslie:elmslie-android", ve
 elmslieCoroutines = { module = "com.github.vivid-money.elmslie:elmslie-coroutines", version.ref = "elmslie" }
 
 vbdelegate = "com.github.kirich1409:viewbindingpropertydelegate:1.5.6"
+swipeRefresh = "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+tiRecycler = "ru.tinkoff.mobile:ti-recycler:1.0.0"
+tiRecyclerRx = "ru.tinkoff.mobile:ti-recycler-rx2:1.0.0"
 
 [bundles]
 elmslie = ["elmslieCore", "elmslieAndroid", "elmslieCoroutines"]

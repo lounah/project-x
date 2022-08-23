@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_bottombar_home"
+        android:title=""/>
+
+    <item
+        android:id="@+id/discovery"
+        android:icon="@drawable/ic_bottombar_discovery"
+        android:title=""/>
+
+    <item
+        android:id="@+id/notifications"
+        android:icon="@drawable/ic_bottombar_notifications"
+        android:title=""/>
+
+    <item
+        android:id="@+id/messenger"
+        android:icon="@drawable/ic_bottombar_messenger"
+        android:title=""/>
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_bottombar_login_menu"
+        android:title=""/>
+
+</menu>

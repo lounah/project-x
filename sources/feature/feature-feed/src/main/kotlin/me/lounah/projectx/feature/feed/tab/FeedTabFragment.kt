@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.view.View
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import me.lounah.projectx.feature.feed.R
 import me.lounah.projectx.feature.feed.databinding.FragmentFeedTabBinding
+import ru.tinkoff.mobile.tech.ti_recycler.base.ViewTyped
+import ru.tinkoff.mobile.tech.ti_recycler_rx2.TiRecyclerRx
 
 internal class FeedTabFragment : Fragment(R.layout.fragment_feed_tab) {
 
@@ -17,6 +20,10 @@ internal class FeedTabFragment : Fragment(R.layout.fragment_feed_tab) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mode = arguments?.getSerializable(ARG_MODE) as FeedMode
+        val recycler = TiRecyclerRx<ViewTyped>(binding.recycler, FeedHolderFactory()) {
+            layoutManager = LinearLayoutManager(requireContext())
+        }
+        recycler.setItems((0..20).map { FeedItem() })
     }
 
     companion object {
